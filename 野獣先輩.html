@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>野獣先輩ボタンだおー！</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #fff0f5;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    }
+    img {
+      max-width: 300px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ff99cc;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: #ffccff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff99cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>野獣先輩だお〜！あなたのハートにやりますねぇ！！！</h1>
+
+  <!-- ZUNだもんの写真（JPEG形式） -->
+  <img src="zun_damon.jpeg" alt="ZUNだもんの写真">
+
+  <!-- 音が鳴るボタン -->
+  <button onclick="playSound()">やりますねぇ〜</button>
+
+  <!-- 音声ファイル -->
+  <audio id="mySound" src="sound.mp3" preload="auto"></audio>
+
+  <script>
+    function playSound() {
+      const sound = document.getElementById("mySound");
+      sound.currentTime = 0;
+      sound.play();
+    }
+  </script>
+</body>
+</html>
